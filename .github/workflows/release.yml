@@ -46,7 +46,7 @@ jobs:
 
       - name: Rename APK
         run: |
-          mv app/build/outputs/apk/release/app-release-unsigned-signed.apk app/build/outputs/apk/release/BurnFat-${{ github.ref_name }}.apk
+          mv app/build/outputs/apk/release/app-release-signed.apk app/build/outputs/apk/release/BurnFat-${{ github.ref_name }}.apk
 
       - name: Upload Release APK
         uses: softprops/action-gh-release@v1

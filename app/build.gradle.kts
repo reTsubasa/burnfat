@@ -25,6 +25,8 @@ android {
 
     signingConfigs {
         create("release") {
+            // Local signing - keystore file should be placed in project root
+            // CI uses GitHub Action to sign APK separately
             storeFile = file("../burnfat.keystore")
             storePassword = "burnfat2024"
             keyAlias = "burnfat"
@@ -39,7 +41,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+            // Only sign locally if keystore exists, otherwise build unsigned for CI
+            if (file("../burnfat.keystore").exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
