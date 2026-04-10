@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <external-files-path
+            name="camera_images"
+            path="Pictures/" />
+        <cache-path
+            name="cached_images"
+            path="images/" />
+    </paths>
+</resources>

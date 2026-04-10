@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">燃脂君</string>
+    <string name="dashboard_title">今日概览</string>
+    <string name="settings_title">设置</string>
+    <string name="history_title">历史记录</string>
+    <string name="weight_curve_title">当前计划</string>
+    <string name="achievement_wall_title">达标墙</string>
+
+    <!-- 餐次 -->
+    <string name="meal_breakfast">早餐</string>
+    <string name="meal_lunch">午餐</string>
+    <string name="meal_dinner">晚餐</string>
+    <string name="meal_snack">加餐</string>
+
+    <!-- 表单 -->
+    <string name="hint_bmr">基础代谢率 (kcal/天)</string>
+    <string name="hint_target_weight">目标体重</string>
+    <string name="hint_current_weight">当前体重</string>
+    <string name="hint_target_date">目标日期</string>
+
+    <!-- 按钮 -->
+    <string name="btn_save">保存</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_capture_photo">拍照识别</string>
+    <string name="btn_manual_entry">手动输入</string>
+
+    <!-- 提醒 -->
+    <string name="reminder_bmr_title">BMR更新提醒</string>
+    <string name="reminder_weight_title">体重记录提醒</string>
+
+    <!-- 成就 -->
+    <string name="achievement_perfect">完美达标</string>
+    <string name="achievement_good">良好达标</string>
+    <string name="achievement_acceptable">基本达标</string>
+</resources>
