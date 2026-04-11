@@ -46,7 +46,13 @@ jobs:
 
       - name: Rename APK
         run: |
-          mv app/build/outputs/apk/release/app-release-signed.apk app/build/outputs/apk/release/BurnFat-${{ github.ref_name }}.apk
+          # Find the signed APK file (the signing action may produce different names)
+          SIGNED_APK=$(find app/build/outputs/apk/release -name "*signed*.apk" -type f | head -n1)
+          if [ -z "$SIGNED_APK" ]; then
+            # If no signed APK found, use the unsigned one
+            SIGNED_APK="app/build/outputs/apk/release/app-release.apk"
+          fi
+          mv "$SIGNED_APK" app/build/outputs/apk/release/BurnFat-${{ github.ref_name }}.apk
 
       - name: Upload Release APK
         uses: softprops/action-gh-release@v1
